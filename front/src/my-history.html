@@ -1,0 +1,99 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="my-svg.html">
+
+<dom-module id="my-history">
+
+  <template>
+
+    <style>
+      :host {
+        display: block;
+        padding: 10px;
+      }
+      .card {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        margin: 24px;
+        border-radius: 5px;
+        background-color: #3F525A;
+        color: #F8F0C2;
+      }
+      .circle {
+        display: inline-block;
+        height: 64px;
+        width: 64px;
+        border-radius: 50%;
+        background: #68B8DB;
+        line-height: 64px;
+        font-size: 30px;
+        color: #F8F0C2;
+        text-align: center;
+      }
+      h1 {
+        font-size: 22px;
+        margin: 16px 0;
+        color: #68B8DB;
+      }
+      
+      a, a:hover, a:visited, b
+        {
+            text-decoration : none;
+            color : #68B8DB
+        }
+        .svg
+        {
+            text-align : center;
+        }
+        
+        
+    </style>
+    <div class="card">
+      <div class="circle">1</div>
+      <h1>Mon profil !</h1>
+        <div class="svg"><my-svg  src="../public/images/moiCartoonSvg.svg" width="33%" height="33%"></my-svg></div>
+        <p> Je suis un programmeur agé de 23 ans. De nature curieux et touche à tout, je surveille de près les nouvelles technologies (Aussi bien dans le domaine de la programmation que dans le domaine des jeux vidéos). J'ai beaucoup appris par moi même. Je pense être plutôt autodidacte et j'adore apprendre de nouvelles choses !<br/> Enfin j'ai un caractère facile, je m'entends avec tout le monde facilement et je suis plutot joyeux ! :) </p>
+    </div>
+    <div class="card">
+      <div class="circle">2</div>
+      <h1>Découverte de la programmation !</h1>
+        <p>Mon intérêt pour la programmation est apparue en fin de collège, c'est à ce moment que j'ai commencé à toucher à tout sur l'ordinateur de la famille. Je me demandais comment ça marchais pour que les fenêtres applicative s'ouvrent. Comment fonctionnait les programmes et j'ai commencé à me renseigner. Je suis alors tombé sur le <b>Site du Zéro</b> (maitenant <a href="https://openclassrooms.com/"><b>OpenClassRoom</b></a>) et j'ai appris un langage de programmation (Le langage C)!</p>
+    </div>
+    <div class="card">
+        <div class="circle">3</div>
+        <h1> Les études !</h1>
+        <p> En premier lieu , j'ai effectué un <b>BAC STI</b>(<b>S</b>ciences et <b>T</b>echnologies <b>I</b>ndustrielles) GEN (<b>G</b>énie <b>E</b>léctronique) , pendant cette formation j'ai eu l'occasion d'en apprendre beaucoup sur l'eléctronique. C'est ce qui m'a permi d'avoir de bonne base pour la suite, j'ai bien compris à quoi servait les composants physiques dans le PC grâce à cette formation !</p>
+        <p> Je me suis ensuite orienté vers un <b>D.U.T Informatique</b> à l'université de Lorraine (IUT Nancy-Charlemagne pour être précis), pendant cette formation j'ai appris plusieurs langage notamment le langage JAVA (C'était le plus présent). J'ai appris beaucoup de choses et j'ai bien été formé mais j'ai eu du mal à apprécié la formation qui pour moi, avait un esprit de compétition trop présent (Le classement rendait les gens à cran). </p>
+        <p> Après le D.U.T je voulais enchainer sur une <b>licence PRO CISIIE</b> toujours à l'université de lorraine, cependant mon dossier n'était pas très bon. J'ai été mis sur liste d'attente pour ne pas être rappelé, j'ai donc essayé de trouver du travail sans réussite (Diplôme mais pas d'expérience). C'est à ce moment que je me suis tourné vers l'alternance et grâce au <b>CESI</b> (que je remercie) j'ai pu obtenir un travail en alternance au Crédit Agricole de Dijon. Ce travail en alternance m'a permis de décroché un titre de niveau 2 intitulé : <b>Responsable en Ingénièrie des Logiciels</b> (C'est un BAC + 4 orienté gestion de projet). </p>
+        <p> Enfin aujourd'hui, je suis toujours en alternance au sein du Crédit Agricole de Dijon pour la suite logique de mes études, je cumule pour le moment 2 ans d'expérience bancaire et suis employé dans l'entreprise jusqu'au 17/11/2017 afin de valider un titre de niveau 1 intitulé : <b>Manager des Systèmes d'Informations</b> (Bac + 5) !</p>
+    </div>
+     <div class="card">
+      <div class="circle">4</div>
+      <h1>Mes hobbies !</h1>
+         <p>Comme je le disais dans mon profil, j'ai un interêt tout particulier pour les nouvelles technologies, le développement informatique me passione, alors je mets un point d'honneur à me tenir informé de ce qui sort pour me facilité la vie ! Par exemple, ce site est écrit en <b>Polymer</b> pour le front-end et <b>NodeJS</b> pour le back-end (qui n'a pas de grosse utilité pour ce portfolio au passage !), je regarde des conférence (notamment <b>Google I/O</b>) et m'informe régulièrement pour me tenir au courant !</p>
+         <p> Au dela de la technologie, je suis aussi un gros joueur ! J'aime les jeux vidéos et j'y passe beaucoup de temps ! Je joue principalement à des jeux multijoueur en ligne (notamment <b>CS-GO</b> et <b>Rocket League</b>)</p>
+         <p> Enfin je suis aussi sportif, je fais de la <b>natation</b> assez régulièrement pour me maintenir en bonnes conditions physiques ! Je pense aussi me ré-inscrire à une <b>salle de musculation</b> prochainement !</p>
+    </div>  
+
+  </template>
+
+  <script>
+
+    Polymer({
+
+      is: 'my-history'
+
+    });
+
+  </script>
+
+</dom-module>

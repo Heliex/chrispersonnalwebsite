@@ -9,8 +9,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="my-svg.html">
 
-<dom-module id="my-view1">
+<dom-module id="my-experiences">
 
   <template>
 
@@ -24,32 +25,40 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         padding: 16px;
         margin: 24px;
         border-radius: 5px;
-        background-color: #fff;
-        color: #757575;
+        background-color: #3F525A;
+        color: #F8F0C2;
       }
       .circle {
         display: inline-block;
         height: 64px;
         width: 64px;
         border-radius: 50%;
-        background: #ddd;
+        background: #68B8DB;
         line-height: 64px;
         font-size: 30px;
-        color: #555;
+        color: #F8F0C2;
         text-align: center;
       }
       h1 {
         font-size: 22px;
         margin: 16px 0;
-        color: #212121;
+        color: #68B8DB;
       }
+      
+      a, a:hover, a:visited, b
+        {
+            text-decoration : none;
+            color : #68B8DB
+        }
+        .center
+        {
+            text-align : center;
+        }
     </style>
 
     <div class="card">
       <div class="circle">1</div>
-      <h1>View One</h1>
-      <p>Ut labores minimum atomorum pro. Laudem tibique ut has.
-      <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
+      <h1>Stage à la mairie de Raon l'étape</h1>
     </div>
 
   </template>
@@ -58,7 +67,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     Polymer({
 
-      is: 'my-view1'
+      is: 'my-experiences'
 
     });
 

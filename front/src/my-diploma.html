@@ -1,0 +1,92 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="my-svg.html">
+<dom-module id="my-diploma">
+
+  <template>
+
+    <style>
+      :host {
+        display: block;
+        padding: 10px;
+      }
+       .card {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        margin: 24px;
+        border-radius: 5px;
+        background-color: #3F525A;
+        color: #F8F0C2;
+      }
+      .circle {
+        display: inline-block;
+        height: 64px;
+        width: 64px;
+        border-radius: 50%;
+        background: #68B8DB;
+        line-height: 64px;
+        font-size: 30px;
+        color: #F8F0C2;
+        text-align: center;
+      }
+      h1 {
+        font-size: 22px;
+        margin: 16px 0;
+        color: #68B8DB;
+      }
+      
+      a, a:hover, a:visited, b
+        {
+            text-decoration : none;
+            color : #68B8DB
+        }
+        .center
+        {
+            text-align : center;
+        }
+    </style>
+    <div class="card">
+      <div class="circle">1</div>
+      <h1>Le bac STI !</h1>
+        <div class="center" ><my-svg src="../public/images/Diplomes/bacSTI.svg" width="65%" height="65%"></my-svg></div>
+    </div>
+    <div class="card">
+      <div class="circle">2</div>
+      <h1>Le DUT Informatique !</h1>
+        <div class="center" ><my-svg src="../public/images/Diplomes/DUT.svg" width="65%" height="65%"></my-svg></div>
+    </div><div class="card">
+    <div class="circle">3</div>
+      <h1>Le dernier diplôme en date ! (Responsable en Ingiènerie des Logiciels)</h1>
+      <div class="center" > Pas encore d'image pour celui-ci ! (Elle viendra après la cérémonie de remise le <b>9 Décembre 2016 </b>)</div>
+    </div>
+    <div class="card">  
+        <div class="circle">4</div>
+          <h1>Les certifications !</h1>
+          <div class="center"> <h2> Certification Auto-Entrepreneur</h2></div>    
+          <div class="center"><my-svg src="../public/images/Diplomes/Entrepreneur.svg" width="65%" height="65%"></my-svg></div>  
+          <div class="center"> <h2> Certification NodeJS</h2></div>    
+          <div class="center"><my-svg src="../public/images/Diplomes/NodeJS.svg" width="65%" height="65%"></my-svg></div>
+         
+    </div>
+  </template>
+
+  <script>
+
+    Polymer({
+
+      is: 'my-diploma'
+
+    });
+
+  </script>
+
+</dom-module>

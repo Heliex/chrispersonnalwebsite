@@ -100,10 +100,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </app-header>
 
         <iron-pages class="pages" role="main" selected="[[page]]" attr-for-selected="name">
-          <my-history name="history"></my-history>
-          <my-diploma name="diploma"></my-diploma>
-          <my-experiences name="experiences"></my-experiences>
-          <my-new-view name="new-view"></my-new-view>
+          <my-history name="history" route="{{route}}"></my-history>
+          <my-diploma name="diploma" route="{{route}}"></my-diploma>
+          <my-experiences name="experiences" route="{{route}}"></my-experiences>
+          <my-new-view name="new-view" route="{{route}}"></my-new-view>
         </iron-pages>
 
       </app-header-layout>

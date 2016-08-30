@@ -8,6 +8,6 @@ var app = express();
 app.use(express.static(path.join(__dirname, 'front')));
 // ---------- Définition des routes -------------
 
-app.listen(3500);
+app.listen(80);
 
 

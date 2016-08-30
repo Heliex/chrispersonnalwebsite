@@ -19,6 +19,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../bower_components/social-iconset/social-iconset.html">
 <link rel="import" href="my-svg.html">
 
 <dom-module id="my-app">
@@ -74,21 +75,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 		  color : #F8F0C2;
 		  font-size: 14px;
 		}
-		a.svg {
-		 text-align : center;
-		 margin-bottom : -10%;
-		 background-color : white;
-		}
-		
-		a.svg:after
-		{
-		  content: ""; 
-		  position: absolute;
-		  top: 0;
-		  right: 0;
-		  bottom: 0;
-		  left:0;
-		}
 }
 
 
@@ -111,8 +97,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <a name="experiences" href="#/experiences">Expériences</a>
           <a name="skills" href="#/skills">Compétences</a>
 		  <a name="projects" href="#/projects">Projets</a>
-		  <a class="svg" href="https://github.com/Heliex" target="_blank"><my-svg src="../public/images/Reseaux/github.svg" width="25%" height="25%"></my-svg></a>
-		  <a class="svg" href="https://plus.google.com/u/0/115001132326251821958" target="_blank"><my-svg src="../public/images/Reseaux/googleplus.svg" width="25%" height="25%"></my-svg></a>
+		  <iron-icon class="size72 colorize" icon="social-iconset:twitter"></iron-icon>
+		  <iron-icon class="size72 colorize" icon="social-iconset:github"></iron-icon>
+			<iron-icon class="size72 colorize" icon="social-iconset:facebook"></iron-icon>
+			<iron-icon class="size72 colorize" icon="social-iconset:instagram"></iron-icon>
+			<iron-icon class="size72 colorize" icon="social-iconset:linkedin"></iron-icon>
+			<iron-icon class="size72 colorize" icon="social-iconset:youtube"></iron-icon>
+			<iron-icon class="size72 colorize" icon="social-iconset:rss"></iron-icon>
+			<iron-icon class="size72 colorize" icon="social-iconset:vimeo"></iron-icon>
+			<iron-icon class="size72 colorize" icon="social-iconset:googleplus"></iron-icon>
         </iron-selector>
       </app-drawer>
 

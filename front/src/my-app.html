@@ -106,10 +106,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <app-toolbar>
             <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
             <div title>Christophe Gerard</div>
-			<div class="reseauSociaux" width ="25%">
-				<my-svg src="../public/images/Reseaux/github.svg" width="25%" height="25%"><a class="svg" href="https://github.com/Heliex" target="_blank"></a></my-svg>
-				<my-svg src="../public/images/Reseaux/googleplus.svg" width="25%" height="25%"><a class="svg" href="https://plus.google.com/u/0/115001132326251821958" target="_blank"></a></my-svg>
-			</div>
           </app-toolbar>
         </app-header>
 
@@ -120,7 +116,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <my-skills name="skills" route="{{route}}"></my-skills>
 		  <my-projects name="projects" route="{{route}}"></my-projects>
         </iron-pages>
-		<footer> Christophe GERARD - 2016 &copy;</footer>
+		<footer> Christophe GERARD - 2016 &copy; 
+			<div class="reseauSociaux" width ="25%">
+				<my-svg src="../public/images/Reseaux/github.svg" width="25%" height="25%"><a class="svg" href="https://github.com/Heliex" target="_blank"></a></my-svg>
+				<my-svg src="../public/images/Reseaux/googleplus.svg" width="25%" height="25%"><a class="svg" href="https://plus.google.com/u/0/115001132326251821958" target="_blank"></a></my-svg>
+			</div>
+		</footer>
       </app-header-layout>
 
     </app-drawer-layout>

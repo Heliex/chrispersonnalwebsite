@@ -19,7 +19,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
-<link rel="import" href="../bower_components/social-media-icons/social-media-icons.html">
+<link rel="import" href="../bower_components/social-iconset/social-iconset.html>
 <link rel="import" href="my-icons.html">
 
 <dom-module id="my-app">
@@ -106,6 +106,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <app-toolbar>
             <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
             <div title>Christophe Gerard</div>
+			<div class="x3size">
+				<iron-icon class="size72 colorize" icon="social-iconset:twitter"></iron-icon>
+				<iron-icon class="size72 colorize" icon="social-iconset:github"></iron-icon>
+				<iron-icon class="size72 colorize" icon="social-iconset:facebook"></iron-icon>
+				<iron-icon class="size72 colorize" icon="social-iconset:instagram"></iron-icon>
+				<iron-icon class="size72 colorize" icon="social-iconset:linkedin"></iron-icon>
+				<iron-icon class="size72 colorize" icon="social-iconset:youtube"></iron-icon>
+				<iron-icon class="size72 colorize" icon="social-iconset:rss"></iron-icon>
+				<iron-icon class="size72 colorize" icon="social-iconset:vimeo"></iron-icon>
+				<iron-icon class="size72 colorize" icon="social-iconset:googleplus"></iron-icon>
+			</div>
           </app-toolbar>
         </app-header>
 
@@ -116,10 +127,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <my-skills name="skills" route="{{route}}"></my-skills>
 		  <my-projects name="projects" route="{{route}}"></my-projects>
         </iron-pages>
-		<footer> &copy; Christophe GERARD - 
-			<a href="https://github.com/Heliex/" target="_blank" rel="noopener noreferrer"><social-media-icons color="#548DA6" icon="github" title="Heliex Github Profile" size="32"></social-media-icons></a>
-			<a href="https://plus.google.com/u/0/115001132326251821958" target="_blank" rel="noopener noreferrer"><social-media-icons color="#548DA6" icon="googleplus" title="Heliex GooglePlus Profile" size ="32"></social-media-icons></a>
-		</footer>
+		<footer> Christophe GERARD - 2016 &copy;</footer>
       </app-header-layout>
 
     </app-drawer-layout>

@@ -67,7 +67,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
         .pages
         {
-            background-color : #548DA6;
+            background : url('../images/public/cardbackground.svg');
         }
 		footer {
 		  height: 50px;
@@ -107,7 +107,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       <!-- Drawer content -->
       <app-drawer>
-	   <p class="navigation"> Menu</p>
+	   <div class="navigation"><p > Menu</p><div>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="history" href="#/history">Histoire</a>
           <a name="diploma" href="#/diploma">Diplômes</a>

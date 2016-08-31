@@ -55,8 +55,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         color: var(--app-secondary-color);
       }
       .drawer-list a.iron-selected {
-        color: black;
+        color: #F8F0C2;
         font-weight: bold;
+		background-color : #3F525A ;
       }
       .drawer-list a.subroute {
         padding-left: 32px;
@@ -76,7 +77,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 		  color : #F8F0C2;
 		  font-size: 14px;
 		}
-		.svg 
+		.svg, .navigation
 		{
 			text-align : center;
 		}
@@ -96,6 +97,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       <!-- Drawer content -->
       <app-drawer>
+	   <p class="navigation"> Menu</p>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="history" href="#/history">Histoire</a>
           <a name="diploma" href="#/diploma">Diplômes</a>

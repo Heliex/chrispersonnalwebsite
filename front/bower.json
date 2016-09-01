@@ -17,6 +17,8 @@
     "paper-icon-button": "PolymerElements/paper-icon-button#~1.1.1",
     "polymer": "polymer/polymer#master",
     "paper-slider": "PolymerElements/paper-slider#^1.0.11",
+    "social-media-icons" : "master",
+    "iron-image" : "master",
     "x-meme": "^0.0.3",
     "awesome-slider": "*"
   },

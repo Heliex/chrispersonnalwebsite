@@ -100,7 +100,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 
     </style>
-
     <app-location use-hash-as-path route="{{route}}"></app-location>
     <app-route
         route="{{route}}"
@@ -180,7 +179,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         // load page import on demand.
         this.importHref(
           this.resolveUrl('my-' + page + '.html'), null, null, true);
-      }
+      },
+      ready: function()
+        {
+            console.log("onloading");
+        }
 
     });
 

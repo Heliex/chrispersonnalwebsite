@@ -1,0 +1,18 @@
+var gulp = require('gulp');
+var vulcanize = require('gulp-vulcanize');
+
+gulp.task('copy', function() {
+    return gulp.src(['front/index.html','front/bower_components/webcomponentsjs/webcomponent-lite.js'], {  base : 'front' })
+           .pipe(gulp.dest('dist'));
+});
+gulp.task('vulcanize',function() {
+    return gulp.src('front/src/my-app.html')
+        .pipe(vulcanize({
+        stripeComments : true,
+        inlineScripts : true,
+        inlineCss : true
+    }))
+        .pipe(gulp.dest('dist/elements'));
+});
+
+gulp.task('default',['vulcanize']);

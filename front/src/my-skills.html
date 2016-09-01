@@ -1,6 +1,7 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/platform.js/platform.js">
 <link rel="import" href="../bower_components/webcomponentsjs/webcomponents-lite.min.js">
+<link rel="import" href="../bower_components/chart-elements/chart-radar.html">
 
 <dom-module id="my-skills">
     <!-- Defines the element's Style and local DOM !-->
@@ -50,6 +51,17 @@
 			{
 				text-align : center;
 			}
+            
+        .chart
+            {
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+				padding: 16px;
+				margin: 24px;
+				border-radius: 5px;
+				background-color: #68b8db;
+                width: 75%;
+                font-size: 1.6em;
+            }
         </style>
         <div class="card">
          <div class="content">
@@ -82,8 +94,8 @@
 			<div class="center"><my-svg src="../public/images/Skills/LangagesProg/web.svg" width="25%" height="25%"></my-svg></div>
 			<p> HTML,CSS,PHP,JQuery sont devenus au fur et à mesure les standars du Web (Même si aujourd'hui on commence de plus en plus à aller vers du JS plutôt que PHP). 
 			J'ai été amené à m'en servir <b>régulièrement</b> puisque j'ai développé une application web lors de mon stage à la Papeteries de Clairefontaine. Je pratique tous ces langages <b>régulièrement</b> (mise à part PHP). </p>
-			<p> Il est temps de vous faire un graphique qui résument mes compètences sur les langages de programmation cités ci-dessus : </p>
-			<div class="center"><p> TODO : RAJOUTER UN GRAPHIQUE QUI RESUME LES COMPETENCES EN PROG.</p></div>
+			<h1 class="center"> En résumé : </h1>
+            <div class="center"><p><chart-radar class="chart" data="[[dataLanguage]]"></chart-radar></p></div>
 		</div>
 		<div class="card">
             <div class="content">
@@ -156,7 +168,37 @@
             is : 'my-skills',
             properties : {
                 route : Object
+            },
+            ready : function() {
+                       this.dataLanguage = {
+              labels: ["Java", "C", "C#", "Cobol", "JavaScript", "HTML/CSS","PHP Orienté Objet", "PHP procédural"],
+              datasets: [
+                  {
+                    label: "Connaissance du langage",
+                    backgroundColor: "rgba(248,240,194,0.2)",
+                    borderColor: "#F8F0C2",
+                    pointBackgroundColor: "#F8F0C2",
+                    pointHoverBackgroundColor: "#fff",
+                    pointBorderColor: "#fff",
+                    pointHoverBorderColor: "#F8F0C2",
+                    data: [100, 60, 40, 50, 100, 100, 100, 60]
+                  },
+                  {
+                    label: "Taux d'utilisation",
+                    backgroundColor: "rgba(63,82,90,0.2)",
+                    borderColor: "#3F525A",
+                    pointBackgroundColor: "#3F525A",
+                    pointBorderColor: "#fff",
+                    pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "#3F525A",
+                    data: [90, 0, 25, 20, 95, 95, 40,20]
+                  }
+                ]
+                };
             }
+            
+ 
+            
         });
     </script>
     

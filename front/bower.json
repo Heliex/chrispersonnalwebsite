@@ -20,7 +20,8 @@
     "social-media-icons" : "master",
     "iron-image" : "master",
     "x-meme": "^0.0.3",
-    "awesome-slider": "*"
+    "awesome-slider": "*",
+    "chart-elements" : "master"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"

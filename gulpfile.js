@@ -3,7 +3,7 @@ var vulcanize = require('gulp-vulcanize');
 
 gulp.task('copy', function() {
     return gulp.src(['front/index.html','front/bower_components/webcomponentsjs/webcomponent-lite.js'])
-           .pipe(gulp.dest('dist'));
+           .pipe(gulp.dest('front/dist'));
 });
 gulp.task('vulcanize',function() {
     return gulp.src([	'front/src/my-app.html','front/src/my-diploma.html',
@@ -18,24 +18,7 @@ gulp.task('vulcanize',function() {
         inlineScripts : true,
         inlineCss : true
     }))
-        .pipe(gulp.dest('dist/src'));
-});
-
-gulp.task('image', function() { 
-    return gulp.src([
-            'front/public/images/background.gif',
-			'front/public/images/backgroundDrawer.jpg',
-			'front/public/images/backgroundDrawer.svg',
-			'front/public/images/cardbackground.svg',
-			'front/public/images/header.jpg',
-			'front/public/images/moiCartoonSvg.svg',
-			'front/public/images/siteperso.svg'])
-        .pipe(vulcanize({
-        stripeComments : true,
-        inlineScripts : true,
-        inlineCss : true
-    }))
-        .pipe(gulp.dest('dist/public/images'))
+        .pipe(gulp.dest('front/dist'));
 });
 
 gulp.task('default',['vulcanize']);

@@ -22,7 +22,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/social-media-icons/social-media-icons.html">
 <link rel="import" href="my-svg.html">
 <link rel="import" href="my-icons.html">
-<linl rel="import" href="elements.html">
+
 
 <dom-module id="my-app">
 
@@ -139,11 +139,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </app-header>
 
         <iron-pages class="pages" role="main" selected="[[page]]" attr-for-selected="name">
-          <my-history name="history" route="{{route}}"></my-history>
-          <my-diploma name="diploma" route="{{route}}"></my-diploma>
-          <my-experiences name="experiences" route="{{route}}"></my-experiences>
-          <my-skills name="skills" route="{{route}}"></my-skills>
-		  <my-projects name="projects" route="{{route}}"></my-projects>
+          <my-history name="history"></my-history>
+          <my-diploma name="diploma"></my-diploma>
+          <my-experiences name="experiences"></my-experiences>
+          <my-skills name="skills"></my-skills>
+	  <my-projects name="projects"></my-projects>
         </iron-pages>
 		<footer> Christophe GERARD - 2016 &copy;</footer>
       </app-header-layout>

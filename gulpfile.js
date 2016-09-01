@@ -32,4 +32,21 @@ gulp.task('vulcanize',function() {
         .pipe(gulp.dest('dist/src'));
 });
 
+gulp.task('image', function() { 
+    return gulp.src([
+            'front/public/images/background.gif',
+			'front/public/images/backgroundDrawer.jpg',
+			'front/public/images/backgroundDrawer.svg',
+			'front/public/images/cardbackground.svg',
+			'front/public/images/header.jpg',
+			'front/public/images/moiCartoonSvg.svg',
+			'front/public/images/siteperso.svg'])
+        .pipe(vulcanize({
+        stripeComments : true,
+        inlineScripts : true,
+        inlineCss : true
+    }))
+        .pipe(gulp.dest('dist/public/images'))
+});
+
 gulp.task('default',['vulcanize']);

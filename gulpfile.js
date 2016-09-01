@@ -12,18 +12,7 @@ gulp.task('vulcanize',function() {
                      	'front/src/my-icons.html',
                      	'front/src/my-projects.html',
                      	'front/src/my-skills',
-                     	'front/src/my-svg',
-                     	'front/public/images/background.gif',
-			'front/public/images/backgroundDrawer.jpg',
-			'front/public/images/backgroundDrawer.svg',
-			'front/public/images/cardbackground.svg',
-			'front/public/images/header.jpg',
-			'front/public/images/moiCartoonSvg.svg',
-			'front/public/images/siteperso.svg',
-			'front/public/images/Diplomes/bacSTI.svg',
-			'front/public/images/Diplomes/DUT.svg',
-			'front/public/images/Diplomes/Entrepreneur.svg',
-			'front/public/images/Diplomes/NodeJS.svg'])
+                     	'front/src/my-svg'])
         .pipe(vulcanize({
         stripeComments : true,
         inlineScripts : true,

@@ -7,7 +7,7 @@ gulp.task('copy', function() {
             .pipe(gulp.dest('dist'));
 });
 gulp.task('vulcanize',function() {
-    return gulp.src(['front/src/my-app.html'])
+    return gulp.src(['front/src/elements.html'])
         .pipe(vulcanize({
         stripeComments : true,
         inlineScripts : true,

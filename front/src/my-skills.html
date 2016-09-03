@@ -62,6 +62,10 @@
                 width: 75%;
                 font-size: 1.6em;
             }
+            .containerChart
+            {
+                display : block;
+            }
         </style>
         <div class="card">
          <div class="content">
@@ -92,10 +96,15 @@
 			Je le pratique aujourd'hui <b>régulièrement</b> aussi bien professionellement que pour mes projets personnels.</p>
 			<div class="center"><h2>Les langages du Web</h2></div>
 			<div class="center"><my-svg src="../public/images/Skills/LangagesProg/web.svg" width="25%" height="25%"></my-svg></div>
-			<p> HTML,CSS,PHP,JQuery sont devenus au fur et à mesure les standars du Web (Même si aujourd'hui on commence de plus en plus à aller vers du JS plutôt que PHP). 
+            <p> HTML,CSS,PHP,JQuery sont devenus au fur et à mesure les <b>standards</b> du Web (Même si aujourd'hui on commence de plus en plus à aller vers du JS plutôt que PHP). 
 			J'ai été amené à m'en servir <b>régulièrement</b> puisque j'ai développé une application web lors de mon stage à la Papeteries de Clairefontaine. Je pratique tous ces langages <b>régulièrement</b> (mise à part PHP). </p>
-			<h1 class="center"> En résumé : </h1>
-            <div class="center"><p><chart-radar class="chart" data="[[dataLanguage]]"></chart-radar></p></div>
+            <div class="center containerChart">
+                <h1>En résumé :</h1>
+                <div class="center">
+                    <p><chart-radar class="chart" data="[[dataLanguage]]"></chart-radar></p>
+                </div>
+            </div>
+           
 		</div>
 		<div class="card">
             <div class="content">

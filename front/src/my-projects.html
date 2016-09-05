@@ -1,6 +1,7 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/platform.js/platform.js">
 <link rel="import" href="../bower_components/webcomponentsjs/webcomponents-lite.min.js">
+<link rel="import" href="../bower_components/pdf-browser-viewer/pdf-browser-viewer.html">
 
 <dom-module id="my-projects">
 	<template>
@@ -48,6 +49,10 @@
 			{
 				text-align : center;
 			}
+         p
+            {
+                text-align : justify;
+            }
 		</style>
 		<div class="card">
             <div class="content">
@@ -55,7 +60,8 @@
 		        <h1>PlastProd</h1>
                  <div><my-svg src="../public/images/Projet/plastprod.svg" width="25%" height="25%"></my-svg></div>
             </div>
-            <p>Projet d'étude</p>
+            <div class="center desktop"> <p>PlastProd était le projet <b>Fil Rouge</b> de ma formation R.I.L, il faisait l'objet des deux ans de formation avec des livrables différents attendus, ci-dessous le pdf <b>illustrant</b> le sujet :  <pdf-browser-viewer file="../public/documents/PlastProd/PlastProd.pdf"  width="100%" not-supported-message="Votre navigateur ne supporte pas le rendu PDF" not-supported-link-message="Téléchargez le document" height="700px"></pdf-browser-viewer></p>
+            </div>
 		</div>
         <div class="card">
             <div class="content">
@@ -119,7 +125,8 @@
 		        <h1> Ce site !  </h1>
                  <div><my-svg src="../public/images/Projet/siteperso.svg" width="25%" height="100%"></my-svg></div>
             </div>
-            <p>Projet perso</p>
+            <p>Ce projet à déjà eu une <b>première version</b> (Basée sur le framework Symfony 2), cependant je trouvais que <b>l'ergonomie</b> du site était pas terrible, je l'ai donc remis au gout du jour 
+                grâce à <b>Polymer</b> et <b>NodeJS.</b> Ci-dessous un gif illustrant cela : <div class="center"><img src="../public/images/Projet/gif.gif" width="60%" height="60%"/></div></p>
 		</div>
 	</template>
 	<script>

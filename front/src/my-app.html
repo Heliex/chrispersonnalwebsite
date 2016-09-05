@@ -154,48 +154,48 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <script src="../bower_components/mobile-detect/mobile-detect.min.js"></script>
   <script>
   window.addEventListener('WebComponentsReady', function(e) {
-                 Polymer({
-
-				  is: 'my-app',
-
-				  properties: {
-
-					page: {
-					  type: String,
-					  reflectToAttribute: true,
-					  observer: '_pageChanged'
-					}
-				  },
-				
-				  drawerToggle : function() 
-					{
-							var md = new MobileDetect(window.navigator.userAgent);
-							if(md.mobile() != null)
-							{
-								if(!this.$.drawer.persistent)
-								{
-									this.$.drawer.close();
-								}
-							}
-					},
-				  observers: [
-					'_routePageChanged(routeData.page)'
-				  ],
-
-				  _routePageChanged: function(page) {
-					this.page = page || 'history';
-				  },
-
-				  _pageChanged: function(page) {
-					// load page import on demand.
-					this.importHref(
-					  this.resolveUrl('my-' + page + '.html'), null, null, true);
-					  window.scrollTo(0,0); // on remonte la scrollBar
-				  }
-				});
+                console.log('components ready');
     });
 
-   
+    Polymer({
+
+      is: 'my-app',
+
+      properties: {
+
+        page: {
+          type: String,
+          reflectToAttribute: true,
+          observer: '_pageChanged'
+        }
+      },
+    
+      drawerToggle : function() 
+        {
+                var md = new MobileDetect(window.navigator.userAgent);
+                if(md.mobile() != null)
+                {
+                    if(!this.$.drawer.persistent)
+                    {
+                        this.$.drawer.close();
+                    }
+                }
+        },
+      observers: [
+        '_routePageChanged(routeData.page)'
+      ],
+
+      _routePageChanged: function(page) {
+        this.page = page || 'history';
+      },
+
+      _pageChanged: function(page) {
+        // load page import on demand.
+        this.importHref(
+          this.resolveUrl('my-' + page + '.html'), null, null, true);
+          window.scrollTo(0,0); // on remonte la scrollBar
+      }
+    });
 
   </script>
 

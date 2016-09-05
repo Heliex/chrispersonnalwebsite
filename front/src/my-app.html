@@ -153,7 +153,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </template>
   <script src="../bower_components/mobile-detect/mobile-detect.min.js"></script>
   <script>
-    Polymer({
+      window.addEventListener('WebComponentsReady', function() {  Polymer({
 
       is: 'my-app',
 
@@ -192,7 +192,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           window.scrollTo(0,0); // on remonte la scrollBar
       }
     });
-
+});
+   
   </script>
 
 </dom-module>

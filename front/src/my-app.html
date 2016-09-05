@@ -190,8 +190,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         // load page import on demand.
         this.importHref(
           this.resolveUrl('my-' + page + '.html'), null, null, true);
+          window.scrollTo(0,0); // on remonte la scrollBar
       }
-
     });
 
   </script>

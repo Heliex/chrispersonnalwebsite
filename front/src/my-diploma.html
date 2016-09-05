@@ -91,15 +91,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <script>
 
-    Polymer({
+     window.addEventListener('WebComponentsReady', function(e) {
+		 Polymer({
 
-      is: 'my-diploma',
-      
-      ready : function()
-        {
-            console.log("readyDiploma");
-        }
-    });
+		  is: 'my-diploma',
+		  
+		  ready : function()
+			{
+				console.log("readyDiploma");
+			}
+		});
+	
+	});
+    
 
   </script>
 

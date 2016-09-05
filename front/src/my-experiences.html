@@ -112,12 +112,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </template>
 
   <script>
+	 window.addEventListener('WebComponentsReady', function(e) {
+		Polymer({
 
-    Polymer({
+			  is: 'my-experiences'
 
-      is: 'my-experiences'
-
-    });
+			});
+	 });
+    
 
   </script>
 

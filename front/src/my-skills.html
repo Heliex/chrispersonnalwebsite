@@ -173,7 +173,8 @@
 		</div>
     </template>
     <script>
-        Polymer({
+	window.addEventListener('WebComponentsReady', function(e) {
+			Polymer({
             is : 'my-skills',
             properties : {
                 route : Object
@@ -205,10 +206,9 @@
                 ]
                 };
             }
-            
- 
-            
         });
+	});
+        
     </script>
     
 </dom-module>

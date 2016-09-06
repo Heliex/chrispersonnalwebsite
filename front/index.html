@@ -11,32 +11,49 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <!doctype html>
 <html>
 <head>
+  <script>/**
+ * Conditionally loads webcomponents polyfill if needed.
+ * Credit: Glen Maddern (geelen on GitHub)
+ */
+var webComponentsSupported = ('registerElement' in document
+  && 'import' in document.createElement('link')
+  && 'content' in document.createElement('template'));
+
+if (!webComponentsSupported) {
+  var wcPoly = document.createElement('script');
+  wcPoly.src = 'bower_components/webcomponentsjs/webcomponents-lite.min.js';
+  wcPoly.onload = lazyLoadPolymerAndElements;
+  document.head.appendChild(wcPoly);
+} else {
+  lazyLoadPolymerAndElements();
+}
+
+function lazyLoadPolymerAndElements () {
+  // Let's use Shadow DOM if we have it, because awesome.
+  window.Polymer = window.Polymer || {};
+  window.Polymer.dom = 'shadow';
+
+  var elements = [
+    'src/elements.html',
+  ];
+
+  elements.forEach(function(elementURL) {
+
+    var elImport = document.createElement('link');
+    elImport.rel = 'import';
+    elImport.href = elementURL;
+
+    document.head.appendChild(elImport);
+
+  })
+}</script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-
   <title>Christophe Gerard </title>
-
   <link rel="shortcut icon" sizes="32x32" href="./public/images/siteperso.bmp">
-  <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-  <link rel="import" href="src/elements.html">
-
-  <style>
-
-    body {
-      margin: 0;
-      font-family: 'Roboto', 'Noto', sans-serif;
-      line-height: 1.5;
-      min-height: 100vh;
-      background-color: #eee;
-    }
-
-  </style>
-
 </head>
 <body>
-
   <my-app></my-app>
-
 </body>
 </html>

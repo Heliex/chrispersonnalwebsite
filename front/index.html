@@ -11,7 +11,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <!doctype html>
 <html lang="fr">
 <head>
-<script type="text/javascript" async="async">         
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Passionné d'informatique depuis mon adolescence, j'apprends aujourd'hui des technologies récentes et les mets en applications.">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <style>
+        body
+        {
+            font-family: sans-serif;
+        }
+    </style>
+  <title>Christophe Gerard </title>
+  <link rel="shortcut icon" sizes="32x32" href="./public/images/siteperso.png">
+</head>
+    <script type="text/javascript" async="async">         
 /**
  * Conditionally loads webcomponents polyfill if needed.
  * Credit: Glen Maddern (geelen on GitHub)
@@ -52,25 +65,11 @@ function lazyLoadPolymerAndElements() {
     var elImport = document.createElement('link');
     elImport.rel = 'import';
     elImport.href = elementURL;
-    elImport.async = 'async';
     document.head.appendChild(elImport);
 
   })
 }
     </script>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="description" content="Passionné d'informatique depuis mon adolescence, j'apprends aujourd'hui des technologies récentes et les mets en applications.">
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-    <style>
-        body
-        {
-            font-family: sans-serif;
-        }
-    </style>
-  <title>Christophe Gerard </title>
-  <link rel="shortcut icon" sizes="32x32" href="./public/images/siteperso.png">
-</head>
 <body>
     <my-app unresolved></my-app>
 </body>

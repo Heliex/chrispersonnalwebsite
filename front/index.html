@@ -35,7 +35,16 @@ function lazyLoadPolymerAndElements() {
   window.Polymer.dom = 'shadow';
 
   var elements = [
-    'src/elements.html'
+    'bower_components/polymer/polymer.html',
+    'bower_components/paper-ripple/paper-ripple.html',
+    'src/my-svg.html',
+    'src/my-app.html',
+    'src/my-history.html',
+    'src/my-diploma.html',
+    'src/my-experiences.html',
+    'src/my-skills.html',
+    'src/my-projects.html',
+    
   ];
 
   elements.forEach(function(elementURL) {

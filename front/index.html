@@ -52,6 +52,7 @@ function lazyLoadPolymerAndElements() {
     var elImport = document.createElement('link');
     elImport.rel = 'import';
     elImport.href = elementURL;
+    elImport.async = 'async';
     document.head.appendChild(elImport);
 
   })

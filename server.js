@@ -3,15 +3,18 @@
 // ---------- Chargement des bibliothèques -------------
 var express = require("express");
 var path = require("path");
-var app = express();
+var letsencrypt = require("letsencrypt-express");
+var server = express();
 
-app.use(express.static(path.join(__dirname, 'front')));
-// ---------- Définition des routes -------------
+server.use(express.static(path.join(__dirname, 'dist')));
 
-app.get('src/my-history.html',function(req,res){
-    
-    console.log("test");
-});
-app.listen(80);
+letsencrypt.create({
+	server : 'https://acme-v01.api.letsencrypt.org/directory',
+	email : 'christophe.gerard8@gmail.com',
+	agreeTos : true,
+	approveDomains : ['www.barbeasts.christophegerard.net'],
+	app : server
+
+}).listen(80,443);
 
 

@@ -13,7 +13,7 @@ gulp.task('copy', function() {
             .pipe(gulp.dest('dist'));
 });
 gulp.task('vulcanize',function() {
-    return gulp.src(['front/src/elements.html'])
+    return gulp.src(['front/src/*.html'])
         .pipe(vulcanize({
         abspath : '',
         stripeComments : true,

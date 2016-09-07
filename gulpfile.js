@@ -7,8 +7,7 @@ gulp.task('copy', function() {
             abspath : '',
 			stripeComments : true,
 			inlineScripts : true,
-			inlineCss : true,
-            excludes: ['//fonts.googleapis.com/*']
+			inlineCss : true
     }))
             .pipe(gulp.dest('dist'));
 });
@@ -18,8 +17,7 @@ gulp.task('vulcanize',function() {
         abspath : '',
         stripeComments : true,
         inlineScripts : true,
-        inlineCss : true,
-        excludes : ['//fonts.googleapis.com/*']
+        inlineCss : true
     }))
         .pipe(gulp.dest('dist/src'));
 });

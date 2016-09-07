@@ -190,7 +190,7 @@
             ready : function() {
                 
             var md = new MobileDetect(window.navigator.userAgent);
-            if(!md.mobile())
+            if(md.mobile() != null)
             {
             
               this.dataLanguage = {

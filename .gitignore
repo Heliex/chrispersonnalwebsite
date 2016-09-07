@@ -1,2 +1,5 @@
 front/bower_components/*
 node_modules/*
+dist/*
+dist/src/*
+.brackets.json

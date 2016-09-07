@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var vulcanize = require('gulp-vulcanize');
+var minify = require('gulp-minify');
 
 gulp.task('copy', function() {
     return gulp.src('front/index.html')
@@ -8,7 +9,7 @@ gulp.task('copy', function() {
 			stripeComments : true,
 			inlineScripts : true,
 			inlineCss : true
-    }))
+    }))     .pipe(minify())
             .pipe(gulp.dest('dist'));
 });
 gulp.task('vulcanize',function() {
@@ -20,7 +21,21 @@ gulp.task('vulcanize',function() {
         inlineCss : true,
         stripExcludes : ['bower_components/polymer/polymer.html','my-svg.html','bower_components/paper-ripple/paper-ripple.html']
     }))
+        .pipe(minify())
         .pipe(gulp.dest('dist/src'));
 });
 
+gulp.task('vulcanize-minify-polymer', function() {
+    
+    return gulp.src('front/bower_components/polymer/polymer.html')
+    .pipe(vulcanize({
+         abspath : '',
+        stripeComments : true,
+        inlineScripts : true,
+        inlineCss : true
+        
+    }))
+    .pipe(minify())
+    .pipe(gulp.dest('dist/bower_components/polymer/'));
+})
 gulp.task('default',['vulcanize']);

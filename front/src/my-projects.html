@@ -1,5 +1,8 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/pdf-browser-viewer/pdf-browser-viewer.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/flip-card/flip-card.html">
 
 <dom-module id="my-projects">
 	<template>
@@ -13,10 +16,15 @@
 				padding: 16px;
 				margin: 24px;
 				border-radius: 5px;
-				background-color: #3F525A;
+				background: url('../public/images/backgroundCard.jpg');
 				color: #F8F0C2;
                 text-align: justify;
 		  }
+            
+            .justify
+            {
+                text-align: justify
+            }
 		  .circle {
 				display: inline-block;
 				height: 64px;
@@ -33,6 +41,11 @@
 				margin: 16px 0;
 				color: #68B8DB;
 		  }
+            
+            h3
+            {
+                color : #68D8DB;
+            }
 		  
           .content,.center
           {
@@ -41,16 +54,339 @@
 		  a, a:hover, a:visited, b
 			{
 				text-decoration : none;
-				color : #68B8DB
+				color : #68B8DB;
 			}
+            
+        .card p, .content, .listeLivrables
+        {
+            opacity: 0.8;
+        }
+            
+        .flipCard
+        {
+            height: 300px;
+            width: 80%;  
+            margin: auto;
+        }
+            
+        .flipCard ul
+        {
+            list-style-type: none;
+        }
+            
+        .front,.back
+        {
+            height: 100%;
+            width: 100%;
+            color: #68B8DB;
+            display: flex;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            border-radius: 30px;
+            
+        }
+            
+        .front
+        {
+            background: url('../public/images/backgroundPaperCard.png');     
+            text-align: center;
+        }
+        
+        .back
+        {
+            background: url('../public/images/paperCardBack.jpg');   
+            text-align : center;
+        }
+        .title, .actions
+        {
+          margin: auto;
+        }
+        
+        paper-button
+        {
+            background-color: white;        
+        }
 		</style>
+        
 		<div class="card">
             <div class="content">
                 <div class="circle">1</div>
 		        <h1>PlastProd</h1>
                  <div><my-svg src="../public/images/Projet/plastprod.svg" width="25%" height="25%"></my-svg></div>
             </div>
-            <div class="center desktop"> <p>PlastProd était le projet <b>Fil Rouge</b> de ma formation R.I.L, il faisait l'objet des deux ans de formation avec des livrables différents attendus, ci-dessous le pdf <b>illustrant</b> le sujet :  <pdf-browser-viewer file="../public/documents/PlastProd/PlastProd.pdf"  width="100%" not-supported-message="Votre navigateur ne supporte pas le rendu PDF" not-supported-link-message="Téléchargez le document" height="700px"></pdf-browser-viewer></p>
+            <div class="justify"> <p>PlastProd était le projet <b>Fil Rouge</b> de ma formation R.I.L, il faisait l'objet des deux ans de formation avec des livrables différents attendus, ci-dessous le pdf <b>illustrant</b> le sujet :
+                <div class="flipCard">
+                    <flip-card axis="x">
+                    <front><div class="front"> <div class="title"> <h1> Sujet du fil rouge</h1></div></div></front>
+                        <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/PlastProd.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                    </flip-card> 
+                </div> <br/>
+                <div class="listeLivrables justify">
+                Le projet consistait en <b>5 Livrables </b> :
+                    
+                        <ul>
+                            <li> Application WEB</li>
+                            <li> Application Mobile</li>
+                            <li> Démarche Qualité , Création d'un environnement de production</li>
+                            <li> Recette applicative et clôture du projet</li>
+                            <li> Synthèse des livrables précédents & clôture définitive</li>
+                        </ul>
+                    </div>
+                <h3> Livrable 1 - Application Web</h3>
+                <div class="justify">
+                    <p> Le besoin étant exprimé dans le PDF ci-dessus, je mets ici uniquement des liens pour récupérer les documents expliquant la solution mise en place : <br/>
+                        <div class="center">
+                             <div class="center flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1> Note de cadrage & plande de communication du projet PlastProd</h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable1/NoteDeCadrage.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                        </div>
+                        <br/><br/>
+                        <div class="center">
+                             <div class="center flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1> Cahier des charges fonctionnels </h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable1/CahierDesCharges.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                        </div>
+                         <br/><br/>
+                        <div class="center">
+                            <div class="center flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1> Plan de tests unitaires & fonctionnels </h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable1/PlanDeTest.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                        </div>
+                         <br/><br/>
+                        <div class="center">
+                             <div class="center flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1> Rapport du projet PlastProd </h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable1/RapportDeProjet.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                        </div>
+                        <br/><br/>
+                        <div class="center">
+                             <div class="center flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1> PowerPoint de présentation utilisé lors de la soutenance </h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/ppt.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable1/PlastProd.pptx" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                        </div>
+                        <br/><br/>
+                    <div class="justify listeLivrables"> 
+                        Vous pouvez aller consulter l'application Web mise en place à cette url : <a href="http://plastprod.christophegerard.net/PlastProd/" target="_blank"> Site de PlastProd</a>.<br/>
+                        Les identifiants pour les parties sécurisée sont les suivant : <br/>
+                        <ul>
+                            <li>Identifiant : <b>root</b></li>
+                            <li>Mot de passe : <b>root</b></li>
+                        </ul>
+                    </div>
+                    </p>
+                </div>
+             <h3> Livrable 2 - Application mobile</h3>
+                <div class="justify">
+                    <p>Comme pour la partie précédente, je ne référence que les documents qui ont contribués à l'élaboration de ce livrable :<br/>
+                        <div class="center">
+                             <div class="center flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1> Cahier de recette de l'application mobile, les tests effectués avec le client sont indiqués dans ce document (c'est le modèle la version remplie on l'avais que en papier) </h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable2/CahierDeRecettes.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                        <br/><br/>
+                        </div>
+                        <div class="center">
+                            <div class="center flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1>Plan de tests unitaires & fonctionnels</h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable2/PlanDeTest.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                        <br/><br/>
+                        </div>
+                        <div class="center">
+                            <div class="center flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1>Le guide d'utilisation de l'application mobile, les fonctionnalités y sont décrites et comment les utiliser</h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable2/GuideUtilisation.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                        <br/><br/>
+                        </div>
+                        <div class="center">
+                             <div class="center flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1>PowerPoint utilisé lors de la soutenance du livrable 2 de PlastProd</h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/ppt.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable2/PlastProd.pptx" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                        <br/><br/>
+                        </div>
+                        <div class="center">
+                            <div class="center flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1>Vous souhaitez essayer l'application PlastProd ? Téléchargez la (<b>Depuis votre mobile uniquement</b>) et connectez-vous avec les identifiants suivant : <br/>
+                                <ul>
+                                    <li>Identifiant : commercial</li>
+                                    <li>Mot de paase : commercial1</li>
+                                </ul></h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/Skills/Editeurs/androidstudio.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable2/PlastprodGerardSafronov.apk" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                            <br/><br/>
+                        </div>
+                    </p>
+                </div>
+            <h3> Livrable 3 - Création d'un environnement de production, démarche qualité</h3>
+                <div class="justify">
+                    <p>
+                        <div class="center">
+                             <div class="flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1>Note de cadrage du livrable 3</h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable3/NoteDeCadrage.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                        <br/><br/>
+                         </div>
+                        <div class="center">
+                            <div class="flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1>Cahier des charges fonctionnels</h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable3/CahierDesCharges.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                            <br/><br/>
+                         </div>
+                        <div class="center">
+                            <div class="flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1>Retours d'expériences & rapport</h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable3/RapportDeProjet.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                        <br/><br/>
+                         </div>
+                        <div class="center">
+                             <div class="flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1>PowerPoint utilisé lors de la soutenance du livrable 3</h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/ppt.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable3/PlastProd.pptx" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                            <br/><br/>
+                         </div>
+                    </p>
+                </div>
+            <h3> Livrable 4 - Recette applicative et clôture du projet</h3>
+                <div class="justify">
+                    <p> C'est sur ce livrable que nous avons <b>changé</b> de client, il s'agissait avant de <b>Fabien CLANCHE</b> mais pour des raisons professionelles, il nous à été affecté un autre client
+                        au nom de <b>Jean-Michel BOLLE</b>. Sa première action a été de changé le contenu du livrable 4 :<br/>
+                        <div class="center">
+                             <div class="flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1>Nouveau contenu du livrable</h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable4/FilRougeLivrable4.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                            <br/><br/>
+                         </div>
+                         <div class="center">
+                              <div class="flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1>Plan de recettage, décris étape par étape</h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable4/PlanDeRecette.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                            <br/><br/>
+                         </div>
+                        <div class="center">
+                             <div class="flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1>Plan de formation de l'application web développée dans le livrable 1</h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable4/PlanDeFormationWeb.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                            <br/><br/>
+                         </div>
+                        <div class="center">
+                             <div class="flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1>Plan de formation de l'application mobile développée dans le livrable 2</h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable4/PlanDeFormationMobile.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                            <br/><br/>
+                         </div>
+                        <div class="center">
+                             <div class="flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1>Plan de reprise d'activié</h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable4/PRA.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                            <br/><br/>
+                         </div>
+                        <div class="center">
+                            <div class="flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1>PowerPoint utilisé pour la soutenance du livrable 4</h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/ppt.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable4/PlastProd.pptx" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                            <br/><br/>
+                         </div>
+                    </p>
+                </div>
+                <h3> Livrable 5 - Synthèse des autres livrables & clôture définitive</h3>
+                <div class="justify">
+                    <p>
+                        <div class="center">
+                            <div class="flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1>Nouveau contenu du livrable</h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable5/Livrable5.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                            <br/><br/>
+                         </div>
+                         <div class="center">
+                             <div class="flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1>Retour d'expérience de chaque personne de l'équipe sur chaque livrable</h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable5/RetourDexperienceEquipeLivrable5.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                            <br/><br/>
+                         </div>
+                        <div class="center">
+                            <div class="flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1>Retour d'expérience de chaque personne de l'équipe sur chaque projet du fil rouge (PlastProd)</h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/pdf.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable5/RetourDexperienceProjetLivrable5.pdf" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                            <br/><br/>
+                         </div>
+                        <div class="center">
+                             <div class="flipCard">
+                                <flip-card axis="x">
+                                <front><div class="front"> <div class="title"> <h1>PowerPoint utilisé pour la soutenance du livrable 5</h1></div></div></front>
+                                    <back><div class="back"><div class="actions"><my-svg src="../public/images/ppt.svg" width="80%" height="80%"></my-svg><paper-button><a href="../public/documents/PlastProd/Livrable5/PlastProd.pptx" target="_blank"> Télécharger</a></paper-button></div></div></back>
+                                </flip-card> 
+                            </div>
+                            <br/><br/>
+                         </div>
+                    </p>
+                </div>
+            </p>
             </div>
 		</div>
         <div class="card">

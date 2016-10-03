@@ -7,65 +7,21 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 --><!DOCTYPE html><html lang="fr"><head>
-<script>         
-/**
- * Conditionally loads webcomponents polyfill if needed.
- * Credit: Glen Maddern (geelen on GitHub)
- */
-var webComponentsSupported = ('registerElement' in document
-  && 'import' in document.createElement('link')
-  && 'content' in document.createElement('template'));
-
-if (!webComponentsSupported) {
-  var wcPoly = document.createElement('script');
-  wcPoly.src = 'bower_components/webcomponentsjs/webcomponents-lite.min.js';
-  wcPoly.onload = lazyLoadPolymerAndElements;
-  document.head.appendChild(wcPoly);
-} else {
-  lazyLoadPolymerAndElements();
-}
-
-function lazyLoadPolymerAndElements() {
-
-  // Let's use Shadow DOM if we have it, because awesome.
-  window.Polymer = window.Polymer || {};
-  window.Polymer.dom = 'shadow';
-
-  var elements = [
-    'bower_components/polymer/polymer.html',
-    'src/my-svg.html',
-    'src/my-app.html',
-    'src/my-history.html',
-    'src/my-diploma.html',
-    'src/my-experiences.html',
-    'src/my-skills.html',
-    'src/my-projects.html',
-    
-  ];
-
-  elements.forEach(function(elementURL) {
-
-    var elImport = document.createElement('link');
-    elImport.rel = 'import';
-    elImport.href = elementURL;
-    document.head.appendChild(elImport);
-
-  })
-}
-    </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Passionné d'informatique depuis mon adolescence, j'apprends aujourd'hui des technologies récentes et les mets en applications.">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
-    <style> body
+    <style>
+        body
         {
-            font-family: "Raleway";
+            font-family: sans-serif;
         }
     </style>
   <title>Christophe Gerard </title>
   <link rel="shortcut icon" sizes="32x32" href="./public/images/siteperso.png">
 </head>
 <body>
+    <script>function lazyLoadPolymerAndElements(){window.Polymer=window.Polymer||{},window.Polymer.dom="shadow";var a=["bower_components/polymer/polymer.html","src/my-svg.html","src/my-app.html"];a.forEach(function(a){var b=document.createElement("link");b.rel="import",b.href=a,document.head.appendChild(b)})}var webComponentsSupported="registerElement"in document&&"import"in document.createElement("link")&&"content"in document.createElement("template");if(webComponentsSupported)lazyLoadPolymerAndElements();else{var wcPoly=document.createElement("script");wcPoly.src="bower_components/webcomponentsjs/webcomponents-lite.min.js",wcPoly.onload=lazyLoadPolymerAndElements,document.head.appendChild(wcPoly)}</script>
     <my-app></my-app>
 
 

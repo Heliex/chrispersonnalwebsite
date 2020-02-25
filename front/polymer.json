@@ -3,9 +3,15 @@
   "shell": "src/my-app.html",
   "fragments": [
     "src/my-history.html",
-    "src/my-diploma.html",
-    "src/my-certifications.html",
     "src/my-skills.html",
-	"src/my-projects.html"
+    "src/my-projects.html"
+  ],
+  "sources": [
+  	"src/**/*",
+	"images/**/*",
+	"bower.json"
+  ],
+  "extraDependencies": [
+	"./bower_components/*"
   ]
 }

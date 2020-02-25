@@ -114,8 +114,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 	   <p class="navigation"> Menu</p>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a on-tap="drawerToggle" name="history" href="#/history">Histoire</a>
-          <a on-tap="drawerToggle" name="diploma" href="#/diploma">Diplômes</a>
-          <a on-tap="drawerToggle" name="experiences" href="#/experiences">Expériences</a>
+          <!--a on-tap="drawerToggle" name="diploma" href="#/diploma">Diplômes</a-->
+          <!--a on-tap="drawerToggle" name="experiences" href="#/experiences">Expériences</a-->
           <a on-tap="drawerToggle" name="skills" href="#/skills">Compétences</a>
 		  <a on-tap="drawerToggle" name="projects" href="#/projects">Projets</a>
         </iron-selector>
@@ -139,8 +139,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <iron-pages class="pages" role="main" selected="[[page]]" attr-for-selected="name">
           <my-history name="history"></my-history>
-          <my-diploma name="diploma"></my-diploma>
-          <my-experiences name="experiences"></my-experiences>
+          <!--my-diploma name="diploma"></my-diploma!-->
+          <!--my-experiences name="experiences"></my-experiences!-->
           <my-skills name="skills"></my-skills>
 	      <my-projects name="projects"></my-projects>
         </iron-pages>
